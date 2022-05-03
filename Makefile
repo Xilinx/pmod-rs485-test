@@ -5,10 +5,10 @@
 #
 # Makefile to build pmod-test application
 #
-APP = pmod-test
+APP = pmod-rs485-test
 
 # Add any other object files to this list below
-APP_OBJS = pmod-test.o
+APP_OBJS = rs485-test.o
 
 LDLIBS += -lmodbus
 
