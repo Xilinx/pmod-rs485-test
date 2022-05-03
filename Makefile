@@ -10,6 +10,8 @@ APP = pmod-test
 # Add any other object files to this list below
 APP_OBJS = pmod-test.o
 
+LDLIBS += -lmodbus
+
 all: build
 
 build: $(APP)
