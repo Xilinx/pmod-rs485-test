@@ -16,15 +16,27 @@ Check the aliexpress link for the detail datasheet of the sensor.
 - HW: Uartlite IP is patched to support RS485
 - SW: libmodbus (build dependency)
 
+## Build:
+
+`make`
+
+## Install:
+
+`sudo make install [DESTDIR=<installation path>]`
+
+`sudo` is needed only if DESTDIR requires privileged access.
+
+Default destination directory for the install (DESTDIR) is `/usr/bin`.
+
 ## Usage:
 
-`sudo pmod-test [<Device>]`
+`sudo pmod-rs485-test [<Device>]`
 
 Where Optional __**Device**__ is the uart device to be used for the test.
 Default device is `/dev/ttyULR0`
 
 E.g
-`sudo pmod-test /dev/ttyULR0`
+`sudo pmod-rs485-test /dev/ttyULR0`
 
 ## License
 
