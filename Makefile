@@ -7,7 +7,8 @@
 #
 APP = pmod-rs485-test
 
-DESTDIR = /usr/bin
+prefix = /usr
+bindir = $(prefix)/bin
 
 # Add any other object files to this list below
 APP_OBJS = rs485-test.o
@@ -23,8 +24,8 @@ $(APP): $(APP_OBJS)
 
 .PHONY: install
 install: $(APP)
-	install -d $(DESTDIR)
-	install -m 0755 $(APP) $(DESTDIR)
+	install -d $(DESTDIR)$(bindir)
+	install -m 0755 $(APP) $(DESTDIR)$(bindir)
 
 .PHONY: clean
 clean:
