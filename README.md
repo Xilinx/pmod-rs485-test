@@ -22,11 +22,12 @@ Check the aliexpress link for the detail datasheet of the sensor.
 
 ## Install:
 
-`sudo make install [DESTDIR=<installation path>]`
+`sudo make install [prefix=<installation prefix path>]`
 
-`sudo` is needed only if DESTDIR requires privileged access.
+The Application will be installed in bin directory inside the prefix path.
+Default prefix is '/usr' hence the default installation path is `/usr/bin`.
 
-Default destination directory for the install (DESTDIR) is `/usr/bin`.
+e.g. `sudo make install prefix=$HOME/install` will install the application in `/home/<usrname>/install/bin`.
 
 ## Usage:
 
