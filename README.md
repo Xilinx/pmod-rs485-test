@@ -25,9 +25,11 @@ Check the aliexpress link for the detail datasheet of the sensor.
 `sudo make install [prefix=<installation prefix path>]`
 
 The Application will be installed in bin directory inside the prefix path.
-Default prefix is '/usr' hence the default installation path is `/usr/bin`.
+Default prefix is '/opt/xilinx/pmod-rs485-test' hence the default installation path is `/opt/xilinx/pmod-rs485-test/bin`.
 
 e.g. `sudo make install prefix=$HOME/install` will install the application in `/home/<usrname>/install/bin`.
+
+> Make sure to add the `<prefix>/bin/` to the PATH variable to access the application by its name.
 
 ## Usage:
 
