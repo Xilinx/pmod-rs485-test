@@ -7,7 +7,7 @@
 #
 APP = pmod-rs485-test
 
-prefix = /usr
+prefix = /opt/xilinx/pmod-rs485-test
 bindir = $(prefix)/bin
 
 # Add any other object files to this list below
