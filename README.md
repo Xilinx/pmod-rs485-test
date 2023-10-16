@@ -16,20 +16,33 @@ Check the aliexpress link for the detail datasheet of the sensor.
 - HW: Uartlite IP is patched to support RS485
 - SW: libmodbus (build dependency)
 
-## Build:
+## Build Instructions
 
-`make`
+- Install build pre-requisites
 
-## Install:
+    ```bash
+        sudo apt install libmodbus-dev
+    ```
 
-`sudo make install [prefix=<installation prefix path>]`
+- Clone the repo
 
-The Application will be installed in bin directory inside the prefix path.
-Default prefix is '/opt/xilinx/pmod-rs485-test' hence the default installation path is `/opt/xilinx/pmod-rs485-test/bin`.
+    ```bash
+        git clone https://github.com/Xilinx/pmod-rs485-test.git
+        cd pmod-rs485-test
+    ```
 
-e.g. `sudo make install prefix=$HOME/install` will install the application in `/home/<usrname>/install/bin`.
+- Build and Install
 
-> Make sure to add the `<prefix>/bin/` to the PATH variable to access the application by its name.
+    ```bash
+        sudo make install [prefix=<installation prefix path>]
+    ```
+    
+    The Application will be installed in bin directory inside the prefix path.
+    Default prefix is '/opt/xilinx/pmod-rs485-test' hence the default installation path is `/opt/xilinx/pmod-rs485-test/bin`.
+
+    e.g. `sudo make install prefix=$HOME/install` will install the application in `/home/<usrname>/install/bin`.
+
+    >Make sure to add the `<prefix>/bin/` to the PATH variable to access the application by its name.
 
 ## Usage:
 
