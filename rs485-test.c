@@ -66,12 +66,18 @@ int main(int argc, char **argv)
 	modbus_connect(ctx);
 
 	/* Set communication mode as RTU_RS485 */
+	/*
+	Commenting this function for now to make it work for Ubuntu 24.04 since driver
+	already has RS485 mode enabled
+	TODO : Debug uartlite-rs485 to check why below function call fails on KR260
+
 	rc = modbus_rtu_set_serial_mode(ctx, MODBUS_RTU_RS485);
 	if (rc == -1) {
 		fprintf(stderr, "serial mode failed: %s\n", modbus_strerror(errno));
 		modbus_free(ctx);
 		return -1;
 	}
+	*/
 
 	printf ("Setting Slave address\n");
 	rc = modbus_set_slave(ctx, 1);
